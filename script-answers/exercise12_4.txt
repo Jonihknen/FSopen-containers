@@ -1,0 +1,418 @@
+Script started on 2022-09-07 12:29:25+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="29"]
+]0;root@LAPTOP-P0SJHI0P: /home/joniroot@LAPTOP-P0SJHI0P:/home/joni# exitdocker start -i cranky_lovelace
+[?2004h]0;root@1dcb7ec994b8: /root@1dcb7ec994b8:/# 
+[K]0;root@1dcb7ec994b8: /root@1dcb7ec994b8:/# curl -sL https://deb.nodesource.com/setup_16.x | bash
+[?2004l
+ install -y nodejs
+## Installing the NodeSource Node.js 16.x repo...
+
+
+## Populating apt-get cache...
+
++ apt-get update
+
+0% [Working]
+            
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+
+0% [Waiting for headers]
+                        
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+
+0% [Waiting for headers] [2 InRelease 14.3 kB/110 kB 13%]
+                                                         
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+
+0% [3 InRelease 5544 B/114 kB 5%] [2 InRelease 24.5 kB/110 kB 22%]
+                                                                  
+0% [3 InRelease 100 kB/114 kB 88%]
+                                  
+0% [Working]
+0% [Waiting for headers]
+                        
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+
+0% [4 InRelease 1165 B/99.8 kB 1%]
+0% [4 InRelease 77.1 kB/99.8 kB 77%]
+                                    
+0% [Working]
+0% [Working]
+100% [Working]
+              
+Fetched 324 kB in 1s (415 kB/s)
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 8%
+
+Reading package lists... 8%
+
+Reading package lists... 9%
+
+Reading package lists... 9%
+
+Reading package lists... 81%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 87%
+
+Reading package lists... 87%
+
+Reading package lists... 91%
+
+Reading package lists... 91%
+
+Reading package lists... 93%
+
+Reading package lists... 93%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 96%
+
+Reading package lists... 96%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+## Installing packages required for setup: lsb-release gnupg...
+
++ apt-get install -y lsb-release gnupg > /dev/null 2>&1
+
+## Confirming "jammy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_16.x/dists/jammy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg >/dev/null
+
+## Creating apt sources list file for the NodeSource Node.js 16.x repo...
+
++ echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x jammy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x jammy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+
+0% [Working]
+            
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+
+0% [Connecting to archive.ubuntu.com (91.189.91.38)] [1 InRelease 4069 B/110 kB 4%] [Connected to deb.nodesource.com (6
+                                                                                                                       
+Get:2 https://deb.nodesource.com/node_16.x jammy InRelease [4583 B]
+
+                                                                                                                       
+0% [Waiting for headers] [1 InRelease 68.3 kB/110 kB 62%] [2 InRelease 4583 B/4583 B 100%]
+                                                                                          
+0% [Waiting for headers] [1 InRelease 84.4 kB/110 kB 76%]
+                                                         
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+
+0% [Waiting for headers] [1 InRelease 84.4 kB/110 kB 76%]
+                                                         
+0% [Waiting for headers]
+                        
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+
+0% [4 InRelease 4084 B/114 kB 4%]
+0% [4 InRelease 15.8 kB/114 kB 14%]
+0% [4 InRelease 97.5 kB/114 kB 86%] [Waiting for headers]
+                                                         
+0% [Waiting for headers]
+                        
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+
+0% [5 InRelease 7005 B/99.8 kB 7%] [Waiting for headers]
+0% [5 InRelease 47.9 kB/99.8 kB 48%] [Waiting for headers]
+                                                          
+0% [Waiting for headers]
+0% [Waiting for headers]
+                        
+Get:6 https://deb.nodesource.com/node_16.x jammy/main amd64 Packages [775 B]
+
+0% [6 Packages 775 B/775 B 100%]
+                                
+0% [Working]
+0% [6 Packages store 0 B]
+                         
+0% [Working]
+100% [Working]
+              
+Fetched 330 kB in 2s (206 kB/s)
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 8%
+
+Reading package lists... 8%
+
+Reading package lists... 9%
+
+Reading package lists... 9%
+
+Reading package lists... 40%
+
+Reading package lists... 69%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 87%
+
+Reading package lists... 87%
+
+Reading package lists... 91%
+
+Reading package lists... 91%
+
+Reading package lists... 93%
+
+Reading package lists... 93%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 96%
+
+Reading package lists... 96%
+
+Reading package lists... 98%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+## Run `[1msudo apt-get install -y nodejs(B[m` to install Node.js 16.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+     echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+[?2004h]0;root@1dcb7ec994b8: /root@1dcb7ec994b8:/# [Kapt install -y nodejs
+[?2004l
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 8%
+
+Reading package lists... 8%
+
+Reading package lists... 9%
+
+Reading package lists... 9%
+
+Reading package lists... 76%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 87%
+
+Reading package lists... 87%
+
+Reading package lists... 91%
+
+Reading package lists... 91%
+
+Reading package lists... 93%
+
+Reading package lists... 93%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 96%
+
+Reading package lists... 96%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... Done
+
+
+Reading state information... 0% 
+
+Reading state information... 2%
+
+Reading state information... Done
+
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 27.1 MB of archives.
+After this operation, 128 MB of additional disk space will be used.
+[33m
+0% [Working][0m
+            
+Get:1 https://deb.nodesource.com/node_16.x jammy/main amd64 nodejs amd64 16.17.0-deb-1nodesource1 [27.1 MB]
+[33m
+0% [1 nodejs 16.2 kB/27.1 MB 0%][0m[33m
+7% [1 nodejs 2288 kB/27.1 MB 8%][0m[33m
+14% [1 nodejs 4678 kB/27.1 MB 17%][0m[33m
+20% [1 nodejs 6808 kB/27.1 MB 25%][0m[33m
+27% [1 nodejs 9211 kB/27.1 MB 34%][0m[33m
+35% [1 nodejs 11.7 MB/27.1 MB 43%][0m[33m
+41% [1 nodejs 13.9 MB/27.1 MB 51%][0m[33m
+48% [1 nodejs 16.3 MB/27.1 MB 60%][0m[33m
+56% [1 nodejs 19.0 MB/27.1 MB 70%][0m[33m
+63% [1 nodejs 21.4 MB/27.1 MB 79%][0m[33m
+70% [1 nodejs 23.8 MB/27.1 MB 88%][0m[33m
+78% [1 nodejs 26.2 MB/27.1 MB 97%][0m[33m
+                                  
+100% [Working][0m
+              
+Fetched 27.1 MB in 6s (4580 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;28r8[1ASelecting previously unselected package nodejs.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6025 files and directories currently installed.)
+Preparing to unpack .../nodejs_16.17.0-deb-1nodesource1_amd64.deb ...
+7[29;0f[42m[30mProgress: [  0%][49m[39m [..................................................................................................] 87[29;0f[42m[30mProgress: [ 20%][49m[39m [###################...............................................................................] 8Unpacking nodejs (16.17.0-deb-1nodesource1) ...
+7[29;0f[42m[30mProgress: [ 40%][49m[39m [#######################################...........................................................] 8Setting up nodejs (16.17.0-deb-1nodesource1) ...
+7[29;0f[42m[30mProgress: [ 60%][49m[39m [##########################################################........................................] 87[29;0f[42m[30mProgress: [ 80%][49m[39m [##############################################################################....................] 8
+7[0;29r8[1A[J[?2004h]0;root@1dcb7ec994b8: /root@1dcb7ec994b8:/# node /usr/src/app/index.js
+[?2004l
+hello world
+[?2004h]0;root@1dcb7ec994b8: /root@1dcb7ec994b8:/# [Kexit
+[?2004l
+exit
+]0;root@LAPTOP-P0SJHI0P: /home/joniroot@LAPTOP-P0SJHI0P:/home/joni# exit
+exit
+
+Script done on 2022-09-07 12:32:18+03:00 [COMMAND_EXIT_CODE="0"]
