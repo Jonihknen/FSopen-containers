@@ -4,6 +4,6 @@ WORKDIR /
 
 COPY . .
 
-RUN npm install
+RUN npm ci
 
-CMD DEBUG=todo-backend:* npm start
+CMD npm start
