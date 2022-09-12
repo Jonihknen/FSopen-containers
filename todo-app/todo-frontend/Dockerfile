@@ -10,6 +10,6 @@ RUN CI=true npm test
 
 RUN npm run build
 
-FROM nginx:1.20-alpine
+RUN npm install -g serve
 
-COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
+CMD ["serve", "-s", "build", "-p", "3000"]

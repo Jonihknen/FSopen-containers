@@ -1,9 +1,9 @@
 FROM node:16
 
-WORKDIR /
+WORKDIR /usr/src/app
 
 COPY . .
 
 RUN npm ci
 
-CMD npm start
+CMD npm start -port 3003
